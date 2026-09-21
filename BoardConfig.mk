@@ -32,10 +32,10 @@ TARGET_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Bootloader
-TARGET_OTA_ASSERT_DEVICE := klimtlte,klimttd
+TARGET_OTA_ASSERT_DEVICE := klimttd
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_deathly_klimttd_defconfig
+TARGET_KERNEL_CONFIG := lineageos_deathly_klimttd_wifionly_defconfig
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include

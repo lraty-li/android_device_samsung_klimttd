@@ -4,8 +4,6 @@ on init
     mkdir /firmware 0771 system system
     restorecon /dev/mbin0
     symlink /dev/block/mmcblk0p8 /dev/block/param
-    symlink /system/bin/ks_9x15 /ks_9x15
-    symlink /system/bin/efsks /efsks
 
 on post-fs-data
     symlink /data/user_de/0/com.android.providers.telephony/databases /data/data/com.android.providers.telephony/databases
