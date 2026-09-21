@@ -1,0 +1,3 @@
+# SM-T705C strict Wi-Fi-only device-specific blob
+# Source baseline: T705CZCU1CVG1 / Android 6.0.1
+lib/hw/sensors.universal5420.so

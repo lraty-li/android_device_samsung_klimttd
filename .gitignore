@@ -1,0 +1,6 @@
+*.img
+*.zip
+*.tar
+*.tar.md5
+*.pit
+out/
