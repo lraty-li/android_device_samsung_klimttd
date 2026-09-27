@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
 # also installs Qualcomm modem/RIL/QMI/GPS components that are intentionally
 # excluded from the first standby test.
 PRODUCT_COPY_FILES += \
+    vendor/samsung/klimttd/proprietary/vendor/firmware/bcm4350_V0301.0609.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4350_V0301.0609.hcd \
     vendor/samsung/klimttd/proprietary/lib/hw/sensors.universal5420.so:system/lib/hw/sensors.universal5420.so \
     vendor/samsung/klimttd/proprietary/lib/hw/sensors.universal5420.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.universal5420.so
 

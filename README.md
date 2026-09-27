@@ -14,10 +14,10 @@ This tree was brought up as a **strict Wi-Fi-only / no-modem experiment** to iso
 | Sensors | Working: accelerometer, gyroscope, magnetometer, proximity, light, grip |
 | Camera | Working at HAL/provider level; 2 cameras enumerate |
 | Audio | HAL/service working |
-| Bluetooth | Basic service reaches ON; see companion notes for early-boot/codec caveats |
+| Bluetooth | Working: controller firmware loads, pairing succeeds, inbound OPP APK transfer validated |
 | Cellular / RIL / modem | Intentionally disabled |
 | GNSS/GPS | Intentionally disabled in the strict build |
-| Deep sleep | Working; short Wi-Fi-on standby test showed repeated kernel mem-suspend and ~95% suspend time |
+| Deep sleep | Working; Wi-Fi OFF >110 h test reached ~99.1% deep sleep, Wi-Fi ON overnight reached ~96.1% |
 
 ## Important SM-T705C differences
 
@@ -47,7 +47,7 @@ The companion kernel patchset disables Qualcomm/Samsung modem, MDM-HSIC, RMNET, 
 
 No Samsung proprietary blobs are included in this repository.
 
-The tree references the SM-T705C sensor blob through `proprietary-files.txt`; obtain proprietary files from firmware/device sources you are legally allowed to use. See the companion compatibility repository for reproducible blob transformations required by old Exynos5420 Android-Q graphics.
+The tree references the SM-T705C sensor blob through `proprietary-files.txt` and installs the pinned BCM4350 Bluetooth firmware from `vendor/samsung/klimttd/proprietary/vendor/firmware/bcm4350_V0301.0609.hcd`. Obtain proprietary files from firmware/device sources you are legally allowed to use. The companion compatibility repository documents the expected hashes and reproducible Android-Q compatibility steps; proprietary binaries are not stored in these public repositories.
 
 ## Companion compatibility repository
 
@@ -63,6 +63,8 @@ Key fixes include:
 - Exynos camera shim path correction
 - Broadcom optional-MFP fallback for old firmware
 - sensor multihal visibility notes
+- pinned BCM4350 firmware placement/verification
+- Bluetooth OPP Android-Q compatibility and APK inbound allowlist
 - strict no-modem validation
 
 ## Source bases used during bring-up
